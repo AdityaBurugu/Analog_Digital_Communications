@@ -57,7 +57,7 @@ xlabel("time");
 
 %demodulation - wide band fm
 d = s2.* c;
-d2 = fmdemod(s2,fc,fs,fc+2);
+d2 = fmdemod(s2,fc,fs,fc);
 [b,a] = butter(2,2*fm/fs);
 z = filter(b,a,d2);
 subplot(3,2,6)
