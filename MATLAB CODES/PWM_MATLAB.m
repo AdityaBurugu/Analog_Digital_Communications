@@ -13,9 +13,9 @@ m=cos(2*pi*fm.*t);
 
 n=length(c);
 for i=1:n
- if (m(i)-c(i)>=0)
+ if (m(i)>=c(i))
     pwm(i)=1;
- elseif (m(i)-c(i)<=0)
+ elseif (m(i)<=c(i))
     pwm(i)=0;
  end
 end
